@@ -13,7 +13,7 @@
 <!-- Site identification -->
 <div id="wrapper">
 	<header>
-		<h1 id="site-title"><a href="index.php">Re-enactors' World</a></h1>
+		<a href="index.php"><h1 id="site-title"><a href="index.php">Re-enactors' World</h1></a>
 		<div id="main-nav">		<!-- Primary Navigation -->
 			<nav id="menu1" role="navigation">
 				<label for="tm" id="toggle-menu" class="toggle">Main Menu</label>

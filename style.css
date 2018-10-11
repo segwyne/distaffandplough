@@ -48,6 +48,7 @@ ASCII Art generator for section titles: http://www.kammerl.de/ascii/AsciiSignatu
 * {
 	margin: 0;
 }
+/* For keeping the footer at the bottom */
 body, html {
 	height: 100%;
 }
@@ -55,54 +56,125 @@ body, html {
 	min-height: 100%;
 	position: relative;
 }
+/* Remove bullets from menus */
 .menu {
 	list-style: none;
 	padding: 0;
 }
-
+/* Remove underlines from menu items */
 .menu a, #site-title a {
 	text-decoration: none;
 }
 /*******************************************************************************
 *******************************************************************************/
+/* Set color and spacings of header */
 header {
 	background-color: saddlebrown;
 	padding: 5px;
 	text-align: center;
 }
-
+/* hide the checkboxes and menus by default */
 nav input[type=checkbox], #main-menu, #account-menu {
 	display: none;
 }
+/* Turn on the menus*/
+#menu1 input[type="checkbox"]:checked + #main-menu,
+#menu2 input[type="checkbox"]:checked + #account-menu {
+  display: block;
+}
+/* Color and spacings for menu items */
+#main-menu li, #account-menu li {
+	background-color: rgba(0,0,0,0.25);
+	padding: 5px 10px;
+}
+/* Style the labels */
+label {
+	display: block;
+	padding: 5px;
+}
 
-@media only and screen (min-width:800px) {
-	header h1 {
-		display: inline-block;
+@media only screen and (min-width:800px) {
+	/* Realign header text */
+	header {
+		text-align: left;
+		height: 2.5em;
+	}
+	/* Reposition Title */
+	#site-title {
+		display: block;
 	 	float: left;
 	 	margin: 0 10px;
 	}
+	/* Reposition main menu */
+	#menu1 {
+		float: left;
+	}
+	/* Hide the label */
+	#toggle-menu {
+		display: none;
+	}
+	/* Display the menu items */
+	#main-menu {
+		display: inline-block;
+	}
+	/* Display them horizontally */
+	#main-menu li {
+		float: left;
+		line-height: 1.75em;
+		background: none;
+	}
+	/* Reposition Title */
+	#menu2 {
+		position: absolute;
+		right: 20px;
+		width: 10em;
+	}
+	/* Adjust spacing of menu label */
+	#toggle-account {
+		line-height: 1.0em;
+		padding: 10px;
+	}
+	/* Color the menu items */
+	#account-menu li {
+		background: saddlebrown;
+		padding: 10px;
+	}
+/* Hover will trigger the toggle */
+  #account-menu li:hover > input[type="checkbox"] + #account-menu {
+    display: block;
+  }
 }
 /******************************************************************************/
+/* Removes color from links in header and footer */
 header, header a, footer, footer a {
 	color: white;
 }
 /******************************************************************************/
+/* Sets the footer at the bottom of the page */
 footer {
 	position: absolute;
 	bottom: 0;
 	background-color: #222;
 	width: 100%;
 }
+/* Spacing for menu items */
 #footer-menu li {
 	text-align: center;
+	padding-top: 5px;
 }
 
 /* Helped along by http://www.websitecodetutorials.com/code/css/css-center-nav.php */
 
 @media only screen and (min-width: 800px) {
+	/* Add the line separater between menu items */
 	#footer-menu a {
 		border-right: 1px solid white;
 	}
+	/* Don't add a line separater after the last item */
+	#footer-menu li:last-child a {
+		border-right: none;
+	}
+	/* Spacing of menu items */
 	footer a {
 		float: left;
 		height: 1.2em;
@@ -110,17 +182,17 @@ footer {
 		margin: .4em 0;
 		padding: 0 10px;
 	}
+	/* Centers the menu */
 	#footer-menu {
 		text-align: center;
 		height: 2.2em;
 	}
+	/* Also centers the menu */
 	#footer-menu ul {
 		display: inline-block;
-	}	
+	}
+	/* Lines the menu items up horizontally */
 	#footer-menu li {
 		display: inline;
-	}
-	#footer-menu li:last-child a {
-		border-right: none;
 	}
 }
