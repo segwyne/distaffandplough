@@ -1,0 +1,126 @@
+/*
+Theme Name: ReEnactors' World
+Author: Saunders Technology
+Author URI: https://saunderstechnology.com/
+Description: 
+Version: 1.0
+ASCII Art generator for section titles: http://www.kammerl.de/ascii/AsciiSignature.php style=smslant
+----------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Normalize
+2.0 Base
+    2.1 Alignments
+    2.2 Clearings
+3.0 Layout
+    3.1 Header
+    3.2 Navigation
+    3.3 Splash Page
+    3.4 Content
+    3.5 Pages
+    3.6 Sidebars
+    3.7 Footer
+4.0 Modules
+    4.1 Tables
+    4.2 Links
+    4.3 Forms
+    4.4 Lists
+    4.5 Buttons
+5.0 Typography
+6.0 Media
+7.0 Responsive - default = phone < 768px
+    7.1 Tablets > 768px
+    7.2 Small desktop > 992px
+    7.3 Large desktop > 1200px
+*/
+/*--------------------------------------------------------------
+   _  __                    ___        
+  / |/ /__  ______ _  ___ _/ (_)__ ___ 
+ /    / _ \/ __/  ' \/ _ `/ / /_ // -_)
+/_/|_/\___/_/ /_/_/_/\_,_/_/_//__/\__/ 
+                                       
+    1.0 Normalize
+--------------------------------------------------------------*/
+/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+	 ========================================================================== */
+* {
+	margin: 0;
+}
+body, html {
+	height: 100%;
+}
+#wrapper {
+	min-height: 100%;
+	position: relative;
+}
+.menu {
+	list-style: none;
+	padding: 0;
+}
+
+.menu a, #site-title a {
+	text-decoration: none;
+}
+/*******************************************************************************
+*******************************************************************************/
+header {
+	background-color: saddlebrown;
+	padding: 5px;
+	text-align: center;
+}
+
+nav input[type=checkbox], #main-menu, #account-menu {
+	display: none;
+}
+
+@media only and screen (min-width:800px) {
+	header h1 {
+		display: inline-block;
+	 	float: left;
+	 	margin: 0 10px;
+	}
+}
+/******************************************************************************/
+header, header a, footer, footer a {
+	color: white;
+}
+/******************************************************************************/
+footer {
+	position: absolute;
+	bottom: 0;
+	background-color: #222;
+	width: 100%;
+}
+#footer-menu li {
+	text-align: center;
+}
+
+/* Helped along by http://www.websitecodetutorials.com/code/css/css-center-nav.php */
+
+@media only screen and (min-width: 800px) {
+	#footer-menu a {
+		border-right: 1px solid white;
+	}
+	footer a {
+		float: left;
+		height: 1.2em;
+		line-height: 1.2em;
+		margin: .4em 0;
+		padding: 0 10px;
+	}
+	#footer-menu {
+		text-align: center;
+		height: 2.2em;
+	}
+	#footer-menu ul {
+		display: inline-block;
+	}	
+	#footer-menu li {
+		display: inline;
+	}
+	#footer-menu li:last-child a {
+		border-right: none;
+	}
+}
