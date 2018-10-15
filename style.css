@@ -9,17 +9,11 @@ ASCII Art generator for section titles: http://www.kammerl.de/ascii/AsciiSignatu
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 1.0 Normalize
-2.0 Base
-    2.1 Alignments
-    2.2 Clearings
-3.0 Layout
-    3.1 Header
-    3.2 Navigation
-    3.3 Splash Page
-    3.4 Content
-    3.5 Pages
-    3.6 Sidebars
-    3.7 Footer
+2.0 Header
+3.0 Footer
+4.0 Calendar
+
+
 4.0 Modules
     4.1 Tables
     4.2 Links
@@ -55,6 +49,7 @@ body, html {
 #wrapper {
 	min-height: 100%;
 	position: relative;
+	padding-bottom: 15em;
 }
 /* Remove bullets from menus */
 .menu {
@@ -65,7 +60,15 @@ body, html {
 .menu a, #site-title a {
 	text-decoration: none;
 }
+
+@media only screen and (min-width:800px) {
+/* Prevents the footer from covering the bottom of the content */
+	#wrapper {
+		padding-bottom: 5em;
+	}
+}
 /*******************************************************************************
+2.0 Header
 *******************************************************************************/
 /* Set color and spacings of header */
 header {
@@ -149,7 +152,9 @@ label {
 header, header a, footer, footer a {
 	color: white;
 }
-/******************************************************************************/
+/*******************************************************************************
+3.0 Footer
+*******************************************************************************/
 /* Sets the footer at the bottom of the page */
 footer {
 	position: absolute;
@@ -195,4 +200,16 @@ footer {
 	#footer-menu li {
 		display: inline;
 	}
+}
+/*******************************************************************************
+4.0 Calendar
+*******************************************************************************/
+
+.event {
+	text-align: center;
+}
+
+.event label {
+	font-size: 1.5em;
+	padding-top: 10px;
 }

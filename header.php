@@ -3,7 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" dir="ltr">
 <head>
-  <title>Title goes here</title>  
+  <title>Linen and Iron</title>  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="style.css" rel="stylesheet">
@@ -13,7 +13,7 @@
 <!-- Site identification -->
 <div id="wrapper">
 	<header>
-		<a href="index.php"><h1 id="site-title"><a href="index.php">Re-enactors' World</h1></a>
+		<a href="index.php"><h1 id="site-title">Linen and Iron</h1></a>
 		<div id="main-nav">		<!-- Primary Navigation -->
 			<nav id="menu1" role="navigation">
 				<label for="tm" id="toggle-menu" class="toggle">Main Menu</label>
@@ -22,7 +22,7 @@
 					<li><a href="">People</a></li>
 					<li><a href="">Calendar</a></li>
 					<li><a href="">Projects</a></li>
-					<li><a href="">Shop</a></li>
+					<li><a href="">Merchants</a></li>
 					<li><a href="">Search</a></li>
 				</ul>
 			</nav>
