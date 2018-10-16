@@ -9,9 +9,10 @@ ASCII Art generator for section titles: http://www.kammerl.de/ascii/AsciiSignatu
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 1.0 Normalize
-2.0 Header
-3.0 Footer
-4.0 Calendar
+2.0 Typography
+3.0 Header
+4.0 Footer
+5.0 Calendar
 
 
 4.0 Modules
@@ -67,8 +68,17 @@ body, html {
 		padding-bottom: 5em;
 	}
 }
+
 /*******************************************************************************
-2.0 Header
+2.0 Typography
+*******************************************************************************/
+h1 {
+	text-align: center;
+	font-family: Acme, Noto-Sans, Arial, sans-serif;
+}
+
+/*******************************************************************************
+3.0 Header
 *******************************************************************************/
 /* Set color and spacings of header */
 header {
@@ -153,7 +163,7 @@ header, header a, footer, footer a {
 	color: white;
 }
 /*******************************************************************************
-3.0 Footer
+4.0 Footer
 *******************************************************************************/
 /* Sets the footer at the bottom of the page */
 footer {
@@ -202,7 +212,7 @@ footer {
 	}
 }
 /*******************************************************************************
-4.0 Calendar
+5.0 Calendar
 *******************************************************************************/
 
 .event {

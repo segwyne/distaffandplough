@@ -1,24 +1,23 @@
-<?php
- $db = mysqli_connect('192.168.1.150','judy','5dragons','Calendar')
- or die('Error connecting to MySQL server.');
-
-include('header.php') ?>
+<?php include('header.php') ?>
 
 <h1>Add an Event</h1>
-<form id="add-event-form" class="event">
+<form id="add-event-form" class="event" action="event-process.php">
 	<label for="event-title">Event Title</label>
 	<input type="text" id="event-title">
 	<label for="event-era">Era</label>
-	<input type="radio" name="event-era" value="ancient">Ancient cultures (before 500 AD)<br>
-	<input type="radio" name="event-era" value="middle">Middle Ages (500 AD - 1500 AD)<br>
-	<input type="radio" name="event-era" value="renaissance">Renaissance (1300 AD - 1700 AD)<br>
-	<input type="radio" name="event-era" value="colonial">Colonial (1500 AD - 1800 AD)<br>
-	<input type="radio" name="event-era" value="fandi">French and Indian War (1754-1763)<br>
-	<input type="radio" name="event-era" value="revwar">Revolutionary War (1775-1783)<br>
-	<input type="radio" name="event-era" value="1812war">War of 1812 (1812-1815)<br>
-	<input type="radio" name="event-era" value="civwar">Civil War (1860s)<br>
-	<input type="radio" name="event-era" value="great">World War I<br>
-	<input type="radio" name="event-era" value="wwii">World War II<br>
+	<select id="event-era">
+		<option value="ancient">Ancient cultures (before 500 AD)</option>
+		<option value="middle">Middle Ages (500 AD - 1500 AD)</option>
+		<option value="renaissance">Renaissance (1300 AD - 1700 AD)</option>
+		<option value="colonial">Colonial (1500 AD - 1800 AD)</option>
+		<option value="fandi">French and Indian War (1754-1763)</option>
+		<option value="revwar">Revolutionary War (1775-1783)</option>
+		<option value="1812war">War of 1812 (1812-1815)</option>
+		<option value="victorian">Victorian (1837-1900)</option>
+		<option value="civwar">Civil War (1860s)</option>
+		<option value="greatwar">World War I</option>
+		<option value="wwii">World War II</option>
+	</select>
 	<label for="event-host">Host Organization</label>
 	<input type="text" id="event-host">
 	<label for="event-start-date">Start Date</label>
@@ -54,9 +53,7 @@ include('header.php') ?>
 	<input type="text" id="event-photo-link">
 	<br><br>
 	<input type="submit" value="Submit Event">
+	<input type="reset" value="Reset Form">
 </form>
 
-<?php 
-mysqli_close($db);
-
-include('footer.php') ?>
+<?php include('footer.php') ?>
